@@ -1,10 +1,11 @@
-Exemple de requête SPARQL sur wikidata permettant de récupérer, pour chaque oeuvre de la base joconde de wikidata, son identifiant, son titre, son auteur et une image.
+Requêtes SPARQL réalisées dans wikidate pour obtenir les csv.
 
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX p: <http://www.wikidata.org/prop/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+--Requête test pour récupérer l'identifiant, le titre de l'oeuvre en français, le nom de l'aueur dans sa langue d'origine et l'image.--
 SELECT ?identifiant ?titre ?nomcreateur ?image
 WHERE {?oeuvre wdt:P347 ?identifiant;
                rdfs:label ?titre;
@@ -13,4 +14,14 @@ WHERE {?oeuvre wdt:P347 ?identifiant;
        ?createur wdt:P1559 ?nomcreateur.
        FILTER (lang(?titre)='fr')
                }
-
+--Requête pour récupérer les titre, mesures, date de création et image des oeuvres de la base Joconde enregistrée dans wikidata
+SELECT ?identifiant (SAMPLE(?titre) AS ?titre) (SAMPLE(?largeur) AS ?largeur) (SAMPLE(?hauteur)AS ?hauteur) (SAMPLE(?datecreation) AS ?dateoeuvre) (SAMPLE(?image) AS ?image)
+WHERE {?oeuvre wdt:P347 ?identifiant;
+               OPTIONAL{?oeuvre rdfs:label ?titre;
+                                FILTER (lang(?titre)='fr')}
+               OPTIONAL{?oeuvre wdt:P2049 ?largeur;
+                                wdt:P2048 ?hauteur;}
+               OPTIONAL{?oeuvre wdt:P571 ?datecreation;}
+               OPTIONAL{?oeuvre wdt:P18 ?image.}
+               }
+GROUP BY ?identifiant
