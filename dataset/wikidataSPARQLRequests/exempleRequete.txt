@@ -25,3 +25,28 @@ WHERE {?oeuvre wdt:P347 ?identifiant;
                OPTIONAL{?oeuvre wdt:P18 ?image.}
                }
 GROUP BY ?identifiant
+
+--Requête pour récupérer des informations sur les artistes--
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+?nomcreateur 
+(SAMPLE(?datenaissance) AS ?datenaissance) 
+(SAMPLE(?datemort) AS ?datemort)
+?nationalitéLabel
+WHERE {
+  ?oeuvre wdt:P347 ?identifiant;
+    wdt:P170 ?createur.
+  ?createur wdt:P1559 ?nomcreateur; 
+            wdt:P27 ?nationalité.
+  OPTIONAL {
+    ?createur wdt:P569 ?datenaissance;
+      wdt:P570 ?datemort;
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr". }
+}
+GROUP BY ?identifiant ?nomcreateur ?nationalitéLabel 
