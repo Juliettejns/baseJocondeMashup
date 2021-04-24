@@ -14,17 +14,44 @@ WHERE {?oeuvre wdt:P347 ?identifiant;
        ?createur wdt:P1559 ?nomcreateur.
        FILTER (lang(?titre)='fr')
                }
---Requête pour récupérer les titre, mesures, date de création et image des oeuvres de la base Joconde enregistrée dans wikidata
-SELECT ?identifiant (SAMPLE(?titre) AS ?titre) (SAMPLE(?largeur) AS ?largeur) (SAMPLE(?hauteur)AS ?hauteur) (SAMPLE(?datecreation) AS ?dateoeuvre) (SAMPLE(?image) AS ?image)
-WHERE {?oeuvre wdt:P347 ?identifiant;
-               OPTIONAL{?oeuvre rdfs:label ?titre;
+--Requête pour récupérer les éléménts concernant les oeuvres--
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?identifiant 
+?titre 
+(SAMPLE(?nomcreateur)AS?nomcreateur) 
+(SAMPLE(?datecreation) AS ?datecreation) 
+?largeur ?hauteur 
+(SAMPLE(?typeLabel) AS ?type)
+(GROUP_CONCAT(?materielLabel;SEPARATOR=",") AS ?materiel)
+(SAMPLE(?genreLabel) AS ?genre)
+(SAMPLE(?image) AS ?image)
+WHERE {?oeuvre wdt:P347 ?identifiant.
+               OPTIONAL{?oeuvre rdfs:label ?titre.
                                 FILTER (lang(?titre)='fr')}
                OPTIONAL{?oeuvre wdt:P2049 ?largeur;
-                                wdt:P2048 ?hauteur;}
-               OPTIONAL{?oeuvre wdt:P571 ?datecreation;}
+                                wdt:P2048 ?hauteur.}
+               OPTIONAL{?oeuvre wdt:P571 ?datecreation.}
+               OPTIONAL{?oeuvre wdt:P170 ?createur.
+                        ?createur wdt:P1559 ?nomcreateur.}
+               OPTIONAL{?oeuvre wdt:P31 ?type.
+                       ?type rdfs:label ?typeLabel.
+                       FILTER (lang(?typeLabel)='fr')}
+                OPTIONAL{?oeuvre wdt:P186 ?materiel.
+                       ?materiel rdfs:label ?materielLabel.
+                       FILTER (lang(?materielLabel)='fr')}
+               OPTIONAL{?oeuvre wdt:P186 ?materiel.
+                       ?materiel rdfs:label ?materielLabel.
+                       FILTER (lang(?materielLabel)='fr')}
+               OPTIONAL{?oeuvre wdt:P136 ?genre.
+                       ?genre rdfs:label ?genreLabel.
+                       FILTER (lang(?genreLabel)='fr')}
                OPTIONAL{?oeuvre wdt:P18 ?image.}
                }
-GROUP BY ?identifiant
+GROUP BY ?identifiant ?titre ?largeur ?hauteur 
 
 --Requête pour récupérer des informations sur les artistes--
 
