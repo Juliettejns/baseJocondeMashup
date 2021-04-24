@@ -64,16 +64,31 @@ SELECT DISTINCT
 ?nomcreateur 
 (SAMPLE(?datenaissance) AS ?datenaissance) 
 (SAMPLE(?datemort) AS ?datemort)
-?nationalitéLabel
+(GROUP_CONCAT(?nationalitéLabel;SEPARATOR=',') AS ?nationalité)
+(SAMPLE(?lieunaissanceLabel) AS ?lieunaissance)
+(SAMPLE(?lieumortLabel) AS ?lieumort)
+(SAMPLE(?mouvementLabel) AS ?mouvement)
 WHERE {
   ?oeuvre wdt:P347 ?identifiant;
     wdt:P170 ?createur.
   ?createur wdt:P1559 ?nomcreateur; 
             wdt:P27 ?nationalité.
+  ?nationalité rdfs:label ?nationalitéLabel.
+  FILTER(lang(?nationalitéLabel)='fr')
   OPTIONAL {
     ?createur wdt:P569 ?datenaissance;
-      wdt:P570 ?datemort;
+              wdt:P570 ?datemort;
+              wdt:P19 ?lieunaissance;
+              wdt:P20 ?lieumort.
+    ?lieunaissance rdfs:label ?lieunaissanceLabel.
+    ?lieumort rdfs:label ?lieumortLabel.
+    FILTER(lang(?lieunaissanceLabel)='fr')
+    FILTER(lang(?lieumortLabel)='fr')
   }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr". }
-}
-GROUP BY ?identifiant ?nomcreateur ?nationalitéLabel 
+  OPTIONAL{
+    ?createur wdt:P135 ?mouvement.
+    ?mouvement rdfs:label ?mouvementLabel.
+    FILTER (lang(?mouvementLabel)='fr')} 
+              }
+
+GROUP BY ?identifiant ?nomcreateur 
