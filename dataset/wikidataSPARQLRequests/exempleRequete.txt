@@ -26,7 +26,7 @@ SELECT ?identifiant
 (SAMPLE(?datecreation) AS ?datecreation) 
 ?largeur ?hauteur 
 (SAMPLE(?typeLabel) AS ?type)
-(GROUP_CONCAT(?materielLabel;SEPARATOR=",") AS ?materiel)
+(GROUP_CONCAT(DISTINCT ?materielLabel;SEPARATOR=",") AS ?materiel)
 (SAMPLE(?genreLabel) AS ?genre)
 (SAMPLE(?image) AS ?image)
 WHERE {?oeuvre wdt:P347 ?identifiant.
@@ -64,7 +64,7 @@ SELECT DISTINCT
 ?nomcreateur 
 (SAMPLE(?datenaissance) AS ?datenaissance) 
 (SAMPLE(?datemort) AS ?datemort)
-(GROUP_CONCAT(?nationalitéLabel;SEPARATOR=',') AS ?nationalité)
+(GROUP_CONCAT(DISTINCT ?nationalitéLabel;SEPARATOR=',') AS ?nationalité)
 (SAMPLE(?lieunaissanceLabel) AS ?lieunaissance)
 (SAMPLE(?lieumortLabel) AS ?lieumort)
 (SAMPLE(?mouvementLabel) AS ?mouvement)
