@@ -21,10 +21,11 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?identifiant 
-?titre 
+(SAMPLE(?titre) AS ? titre)
 (SAMPLE(?nomcreateur)AS?nomcreateur) 
 (SAMPLE(?datecreation) AS ?datecreation) 
-?largeur ?hauteur 
+(SAMPLE(?largeur) AS ?largeur)
+(SAMPLE(?hauteur) AS ?hauteur)
 (SAMPLE(?typeLabel) AS ?type)
 (GROUP_CONCAT(DISTINCT ?materielLabel;SEPARATOR=",") AS ?materiel)
 (SAMPLE(?genreLabel) AS ?genre)
@@ -51,7 +52,7 @@ WHERE {?oeuvre wdt:P347 ?identifiant.
                        FILTER (lang(?genreLabel)='fr')}
                OPTIONAL{?oeuvre wdt:P18 ?image.}
                }
-GROUP BY ?identifiant ?titre ?largeur ?hauteur 
+GROUP BY ?identifiant
 
 --Requête pour récupérer des informations sur les artistes--
 
