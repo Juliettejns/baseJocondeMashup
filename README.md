@@ -23,7 +23,7 @@ Ce dépôt contient un projet de mashup de données autour d'un extrait de la Ba
 |     └── README.md
 |
 ├── imgs
-├── README.md
+└── README.md
 ```
 ## Crédits
 Ce dépôt est développé par [@mathildeliteau](http://github.com/mathildeliteau), [@Heresta](http://github.com/Heresta) et [@Juliettejns](http://github.com/Juliettejns).
