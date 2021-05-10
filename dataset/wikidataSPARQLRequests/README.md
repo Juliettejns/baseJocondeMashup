@@ -3,8 +3,7 @@
 petit résumé du dossier + de ce qu'il contient
 ## Récupération de données
 ### Base Joconde et Wikidata
-ici mettre le schéma RDF et détailler ce que l'on peut récupérer grâce à wikidata. Indiquer nos choix de récupération.
-
+ici mettre le schéma RDF et détailler ce que l'on peut récupérer grâce à wikidata. Indiquer nos choix de récupération. (ou dans le dossier dataset directement)
 ### Requêtes SPARQL
 ici mettre les requêtes SPARQL faites et les expliquer
 
