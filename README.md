@@ -3,6 +3,29 @@
 Ce dépôt contient un projet de mashup de données autour d'un extrait de la Base Joconde, répertoriant les oeuvres d'art des musées français et accessible sur
 [data.culture.gouv.fr](https://data.culture.gouv.fr/explore/dataset/base-joconde-extrait/information/). Ce travail est réalisé dans le cadre du cours de Science de la donnée du [Master 2](http://www.chartes.psl.eu/fr/cursus/master-technologies-numeriques-appliquees-histoire) Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes.
 
+## Justification du dataset 
+### 1 Constat
+- comment est notre dataset Joconde (gros, difficile à traiter sur les ordi et très mal organisé car rempli à la main) => on a voulu récupérer des infos plus propres venant de WD
+- sur WD on a trouvé des infos plus propres sur les auteurs/oeuvres dont les images => comme la plupart des images sont des images de peinture, on a décidé de partir sur une focalisation sur la peinture
+### 2. Nettoyage
+#### a Nettoyage Joconde 
+-> voir le README correspondant
+#### b Nettoyage WD
+-> voir le README correspondant
+### 3. Résultat du join
+Test avec un left-join : très peu d'infos correspondant à notre DS dans WD (à peine une 100aine)
+Finalement avec un inner-join on passe de 17000 à 700 dans le DS final.
+
+### Conclusion
+les 3 DS ne coincidaient pas du tout, mais on a continué car c'était intéressat de voir ce que pouvaient donner ce genre de jointures en visualisation
+
+## Visualisation
+### Visualisation 1
+balbal
+### Visualisation 2
+balbal
+...
+
 ## Repository
 ```
 ├── dataset
