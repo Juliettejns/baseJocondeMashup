@@ -1,95 +1,28 @@
 # Données Wikidata
 
+<div align="justify">
+  
 Ce dossier contient les csv, sur les oeuvres de la Base Joconde et sur les auteurs d'oeuvres de la Base Joconde, récupérés sur Wikidata, ainsi que leur version nettoyées sur Dataiku et la documentation associée.
 
 ## Récupération de données
-### Base Joconde et Wikidata
-ici mettre le schéma RDF et détailler ce que l'on peut récupérer grâce à wikidata. Indiquer nos choix de récupération. 
-### Requêtes SPARQL
-Requête pour récupérer les données concernant les oeuvres de la base Joconde présentent sur Wikidata:
-```
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+<p align="center" class="float">
 
-SELECT ?identifiant 
-(SAMPLE(?titre) AS ? titre)
-(SAMPLE(?nomcreateur)AS?nomcreateur) 
-(SAMPLE(?datecreation) AS ?datecreation) 
-(SAMPLE(?largeur) AS ?largeur)
-(SAMPLE(?hauteur) AS ?hauteur)
-(SAMPLE(?typeLabel) AS ?type)
-(GROUP_CONCAT(DISTINCT ?materielLabel;SEPARATOR=",") AS ?materiel)
-(SAMPLE(?genreLabel) AS ?genre)
-(SAMPLE(?image) AS ?image)
-WHERE {?oeuvre wdt:P347 ?identifiant.
-               OPTIONAL{?oeuvre rdfs:label ?titre.
-                                FILTER (lang(?titre)='fr')}
-               OPTIONAL{?oeuvre wdt:P2049 ?largeur;
-                                wdt:P2048 ?hauteur.}
-               OPTIONAL{?oeuvre wdt:P571 ?datecreation.}
-               OPTIONAL{?oeuvre wdt:P170 ?createur.
-                        ?createur wdt:P1559 ?nomcreateur.}
-               OPTIONAL{?oeuvre wdt:P31 ?type.
-                       ?type rdfs:label ?typeLabel.
-                       FILTER (lang(?typeLabel)='fr')}
-                OPTIONAL{?oeuvre wdt:P186 ?materiel.
-                       ?materiel rdfs:label ?materielLabel.
-                       FILTER (lang(?materielLabel)='fr')}
-               OPTIONAL{?oeuvre wdt:P186 ?materiel.
-                       ?materiel rdfs:label ?materielLabel.
-                       FILTER (lang(?materielLabel)='fr')}
-               OPTIONAL{?oeuvre wdt:P136 ?genre.
-                       ?genre rdfs:label ?genreLabel.
-                       FILTER (lang(?genreLabel)='fr')}
-               OPTIONAL{?oeuvre wdt:P18 ?image.}
-               }
-GROUP BY ?identifiant
-```
-Requête pour récupérer les données concernant les auteurs des oeuvres de la Base Joconde présentes dans Wikidata:
-```
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  <img src="/images/structurationRDFWikidata.png" width="450"/>
 
-SELECT DISTINCT
-?nomcreateur 
-(SAMPLE(?datenaissance) AS ?datenaissance) 
-(SAMPLE(?datemort) AS ?datemort)
-(GROUP_CONCAT(DISTINCT ?nationalitéLabel;SEPARATOR=',') AS ?nationalité)
-(SAMPLE(?lieunaissanceLabel) AS ?lieunaissance)
-(SAMPLE(?lieumortLabel) AS ?lieumort)
-(SAMPLE(?mouvementLabel) AS ?mouvement)
-WHERE {
-  ?oeuvre wdt:P347 ?identifiant;
-    wdt:P170 ?createur.
-  ?createur wdt:P1559 ?nomcreateur; 
-            wdt:P27 ?nationalité.
-  ?nationalité rdfs:label ?nationalitéLabel.
-  FILTER(lang(?nationalitéLabel)='fr')
-  OPTIONAL {
-    ?createur wdt:P569 ?datenaissance;
-              wdt:P570 ?datemort;
-              wdt:P19 ?lieunaissance;
-              wdt:P20 ?lieumort.
-    ?lieunaissance rdfs:label ?lieunaissanceLabel.
-    ?lieumort rdfs:label ?lieumortLabel.
-    FILTER(lang(?lieunaissanceLabel)='fr')
-    FILTER(lang(?lieumortLabel)='fr')
-  }
-  OPTIONAL{
-    ?createur wdt:P135 ?mouvement.
-    ?mouvement rdfs:label ?mouvementLabel.
-    FILTER (lang(?mouvementLabel)='fr')} 
-              }
-
-GROUP BY ?identifiant ?nomcreateur 
-```
-
-
+  </p>
+  
+Ce schéma donne une vision globale des différents éléments qu'il est possible de récupếrer sur Wikidata à propos de la Base Joconde. Réalisé par nos soins, il nous a notamment permis de bien comprendre la structure des triplets RDF et donc d'élaborer plus facilement des requêtes SPARQL fonctionnels afin d'obtenir les différents éléments évoqués. </br>
+Dans un premier temps, on a ainsi pu récupérer des données qui n'étaient pas dans l'extrait de la base, à l'instar des images des oeuvres et de leur genre artistiques ainsi que des données sur les auteurs des oeuvres, tels que les dates et lieux de naissance et de morts et les mouvements caractéristiques des auteurs. </br>
+Dans un second temps, face aux différentes données peu manipulables dans l'extrait de la base Joconde à nettoyer, dû à leur importance et la variété de structure des cellules, nous avons décidé de récupérer certaines données qui, grâce aux requêtes SPARQL, se sont avérées plus normalisées et donc mieux structurées et plus faciles à normaliser. C'est ainsi le cas des mesures, hauteur et largeur des oeuvres, qui ont toutes été récupérées séparemment et en centimètres, des matériaux, qui ont pû être divisés entre techniques utilisées et support ou encore les types.</br>
+Dans un dernier temps, nous avons récupéré des données contenues dans l'extrait de la base Joconde, tel que les titres, dans un souci d'être sûres de ces informations. En effet, un certain nombre de titre ne coïncidait pas.</br>
 ## Nettoyage de données
 ### Pour la requête oeuvre
+Le csv contenant les oeuvres de la base Joconde accessibles sur Wikidata est composé d'un peu plus de 15 000 lignes et de 10 colonnes, présentées ci-dessus:</br>
+IMAGE DES NOMS DES COLONNES</br>
+Si ce résultat reste particulièrement propre, il a tout de même fallu le nettoyer un peu. Nous avons d'abord gardé que ce qui ressemble à des peintures, ce qui a été fait en filtrant avec la colonne _type_ C'est notamment le cas des _dates_, qu'il a fallu nettoyer pour ne garder que l'année, dans l'idée de réaliser une visualisation à partir de cela, ou encore, de la colonne _matériel_. Celle-ci a été un peu plus longue à restructurer, puisqu'il a fallu la diviser en deux colonnes, une première contenant les _techniques de peinture_ et une seconde les _supports_. Les _genres_ ont été nettoyés pour normaliser les différents termes et une colonne _genre simplifié_ a été créé pour simplifier encore plus dans le but de réaliser une visualisation de ces données.
 ### Pour la requête auteur
-détail des choix de nettoyage faits + informations chiffrés sur le nbre d'éléments obtenus
+Le csv contenant les auteurs ayant réalisés des oeuvres de la base Joconde accessibles sur Wikidata est composé de 500 lignes et de 6 colonnes, présentées ci-dessus:</br>
+IMAGE DES NOMS DES COLONNES</br>
+Là aussi, le fait d'avoir réquêté assez précisemment dans Wikidata a permis d'obtenir des données assez propres et ne nécessitant pas trop de travail de nettoyage. Les _dates de naissance et de mort_ ont été nettoyé pour ne garder également que l'année. Les _lieux de naissance et de mort_ ont été nettoyés dans le but de garder uniquement les noms de villes et non plus les quartiers. Les _mouvements_ ont été normalisés.
+
+</div>
