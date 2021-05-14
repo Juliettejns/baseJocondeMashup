@@ -9,8 +9,8 @@ Le dataset de travail, [extrait de la base Joconde](https://github.com/Juliettej
 Nous avons donc obtenu deux csv. Le premier, sur les oeuvres de la Base Joconde contenues dans Wikidata, soit 15759 éléments, présente à la fois des colonnes qui nous semblaient très compliquées à nettoyer et des colonnes d'informations non contenues dans l'extrait de la Base, à l'instar des images des oeuvres. Le second, sur les auteurs des oeuvres de la base Joconde contenues dans Wikidata, de  est essentiellement composé d'élément qui n'était dans la Base. La plupart des images récupérées dans Wikidata étant des images de peinture, nous avons décidé de nous focaliser sur les peintures dans la base Joconde, dans l'idée de réaliser une visualisation mettant l'accent sur une gallerie d'images. </br>
 Il aurait été également intéressant d'associer notre extrait de la Base Joconde, à la base Muséofile, qui repertorie les musées de France. Cette idée est d'autant plus intéressante que le set de données possède une colonne comprenant les identifiants muséofiles des musées, ce qui permettraient de lier les deux csv facilement. Cependant, la base Muséofile est directement lié à la Base Joconde et les informations étaient donc déjà présentes.
 ### 2. Nettoyage des données
-Pour une description détaillée du nettoyage de la base Joconde: ici.</br>
-Pour une description détaillée des sets de données récupérés sur Wikidata: ici.</br>
+Pour une description détaillée du nettoyage de la base Joconde: [ici](https://github.com/Juliettejns/baseJocondeMashup/tree/main/dataset/extraitJoconde/README.md).</br>
+Pour une description détaillée des sets de données récupérés sur Wikidata: [ici](https://github.com/Juliettejns/baseJocondeMashup/tree/main/dataset/wikidataSPARQLRequests/README.md).</br>
 ### 3. Association des données
 Une fois les trois sets de données nettoyés, il a fallu les associer. Pour ce faire, nous avions tout d'abord projeté de réaliser un left join. Cela permet de garder toutes les données de l'extrait de la Base Joconde correspondant aux peintures, et de leur associer, quand cela est possible, les informations récupérées sur Wikidata. Nous avons donc joint les données de la base Joconde au csv correspondant aux oeuvres Wikidata grâce à leurs identifiants. Nous avons alors obtenu un csv de 17000 lignes, dont seulement quelques petites centaines d'entre elles correspondaient aux données récupérées sur Wikidata. </br>
 Nous avons alors réalisé que les données de l'extrait de la Base Joconde sur lequel nous avions travaillé et les données sur la base disponibles sur Wikidata ne coïncidaient absolument pas, ou alors très peu. Malgré cela, nous avons choisi de continuer à travailler dessus, en préférant faire un inner-join des données, soit uniquement les données présentes à la fois dans notre extrait de la Base Joconde et dans Wikidata, soit un dataset de presque 700 lignes. Cela nous permet de récupérer un set de données dans lequel les données de wikidata ne sont pas à peine visibles, sachant que celles-ci sont des colonnes assez importantes dans nos idées de visualisation. </br>
@@ -19,7 +19,6 @@ En dépit de la réduction drastique du dataset, qui n'est donc plus vraiment r�
 ## Visualisation
 => ici on décrit de façon concise nos visualisations, que l'on peut détailler dans un README dans un dossier visualisation. + conclusion de ce que nous apprennent ces visualisations
 </div>
-
 ## Repository
 ```
 ├── dataset
