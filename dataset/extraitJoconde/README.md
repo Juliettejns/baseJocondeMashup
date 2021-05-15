@@ -3,6 +3,7 @@ Ce dossier contient l'extrait de la base Joconde, récupérée sur le site cultu
 
 La base Joconde, dans sa globalité, est composée de 650 000 notices et décrit les oeuvres des musées de France. Elle est liée à la base Muséofile, qui décrit les musées de France. L'extrait sur lequel nous avons travaillé est d'environ 60 000 oeuvres, soit un peu moins de 10% du set total. Ainsi, le corpus de travail n'est pas du tout représentatif de la globalité de la base. 
 
+Les csv manipulés étant trop importants pour github, nous avons utilisé une extension appelée github LFS pour nous permettre de les ajouter au dépôt. 
 ## Suppression des colonnes non utiles
 Sur les 34 colonnes de base, nous avons choisi de supprimer toutes les colonnes ayant moins d'un tiers de données et qui nous semblaient non indispensables, soit 11 colonnes. Détaille des colonnes supprimées.
 
