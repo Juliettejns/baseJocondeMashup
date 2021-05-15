@@ -6,8 +6,7 @@ Ce dépôt contient un projet de mashup de données autour d'un extrait de la Ba
 
 ## Réalisation du Mashup
 <p align="center">
-  <img src="images/pipelinemashup.png"/>
-  <caption>Schéma du travail réalisé</caption>
+  <img src="images/pipelinemashup.png" width="400"/>
 </p>
 
 Pour une description détaillée du travail réalisé: [ici](https://github.com/Juliettejns/baseJocondeMashup/blob/documentation_nettoye/dataset/README.md)
