@@ -3,7 +3,7 @@
 <div align="justify">
   
   <p align="center">
-  <img src="images/Flow\ Dataiku.png" width="400"/>
+  <img src="../images/FlowDataiku.png" width="800"/>
 </p>
 
 ## 1. Présentation des données
