@@ -2,7 +2,10 @@
 
 <div align="justify">
   
-  ICI AJOUT IMAGE DU FLOW DATAIKU
+  <p align="center">
+  <img src="images/Flow\ Dataiku.png" width="400"/>
+</p>
+
 ## 1. Présentation des données
 Le dataset de travail, [extrait de la Base Joconde](https://github.com/Juliettejns/baseJocondeMashup/tree/main/dataset/extraitJoconde/base-joconde-extrait.tar.xz), est composé de 60 000 lignes et 34 colonnes. Cette imposante taille a rendu le travail de nettoyage à réaliser particulièrement compliqué, notamment pour nos ordinateurs. La base a été remplie à la main, par chacun des musées, et, les colonnes pouvant contenir plusieurs informations différentes, les cellules ne sont pas du tout normalisées. Ainsi, face à la quantité d'informations difficiles à réorganiser et dans l'idée de réduire une étape chronophage, nous avons voulu récupérer des informations plus propres sur wikidata. </br>
 Nous avons donc obtenu deux fichiers csv. Le premier, sur les oeuvres de la Base Joconde contenues dans Wikidata, soit 15 759 éléments, présente à la fois des colonnes qui nous semblaient très compliquées à nettoyer dans notre dataset d'origine et des colonnes d'informations qu'il ne contenait pas, à l'instar des images des oeuvres. Le second, sur les auteurs des oeuvres de la base Joconde contenues dans Wikidata, est essentiellement composé d'éléments qui n'étaient dans la Base. La plupart des images récupérées dans Wikidata étant des images de peinture, nous avons décidé de nous focaliser sur celles-ci dans la Base Joconde, dans l'idée de réaliser une visualisation mettant l'accent sur une gallerie d'images. </br>
