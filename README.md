@@ -40,6 +40,7 @@ Pour une description détaillée du travail réalisé: [ici](https://github.com/
 ├── extraitJoconde
 |    ├── ...
 |    └── README.md
+|
 ├── imgs
 |
 └── README.md
