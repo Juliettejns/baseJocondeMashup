@@ -9,6 +9,7 @@ Nous avons donc obtenu deux fichiers csv. Le premier, sur les oeuvres de la Base
 Il aurait été également intéressant d'associer notre extrait de la Base Joconde, à la [base Muséofile](https://data.culture.gouv.fr/explore/dataset/musees-de-france-base-museofile/information/), qui répertorie les musées de France. Cette idée est d'autant plus intéressante que le set de données possède une colonne comprenant les identifiants Muséofile des musées, ce qui auraient permis de lier les deux fichiers csv facilement. Cependant, la base Muséofile est directement liée à la base Joconde et cette jointure n'aurait créé que des doublons.
 ## 2. Nettoyage des données
 Le nettoyage des fichiers csv a été exclusivement réalisé sur [Dataiku](https://fr.wikipedia.org/wiki/Dataiku).
+
 Pour une description détaillée du nettoyage de la Base Joconde: [ici](https://github.com/Juliettejns/baseJocondeMashup/tree/main/dataset/extraitJoconde/README.md).</br>
 Pour une description détaillée des sets de données récupérés sur Wikidata: [ici](https://github.com/Juliettejns/baseJocondeMashup/tree/main/dataset/wikidataSPARQLRequests/README.md).</br>
 ## 3. Association des données
