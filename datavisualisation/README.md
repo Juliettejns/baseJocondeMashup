@@ -4,7 +4,7 @@
 ## Tableau Public
 
 ## Palladio
-Ayant à traiter des oeuvres, il était important de pouvoir rendre compte de celles-ci visuellement en passant par des représentations. Cela n'étant pas possible dans Tableau, il a fallu passer par [Palladio](http://hdlab.stanford.edu/palladio/) afin de réaliser une visualisation. Etant donné qu'il n'est pas possible de récupérer la visualisation créée, nous avons téléchargé le fichier json lorsque celle-ci a été terminée. Il se trouve également dans ce dossier. Nous voulions également pouvoir rendre compte de ce que nous avions effectivement fait dans Palladio. Ci-dessous se trouvent quelques images qui rendent compte de la visualisation.
+Ayant à traiter des oeuvres picturales, il était important de pouvoir rendre compte de celles-ci visuellement en passant par des représentations. Cela n'étant pas possible dans Tableau, il a fallu passer par [Palladio](http://hdlab.stanford.edu/palladio/) afin de réaliser une visualisation. Etant donné qu'il n'est pas possible de récupérer la visualisation créée, nous avons téléchargé le fichier json lorsque celle-ci a été terminée. Il se trouve également dans ce dossier. Nous voulions également pouvoir rendre compte de ce que nous avions effectivement fait dans Palladio. Ci-dessous se trouvent quelques images qui rendent compte de la visualisation.
 
 <p align="center">
   <img src="../images/Palladio1" width="1000"/>
