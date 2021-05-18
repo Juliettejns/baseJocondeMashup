@@ -12,9 +12,11 @@ Ce dépôt contient un projet de mashup de données autour d'un extrait de la Ba
 Pour une description détaillée du travail réalisé : [ici](https://github.com/Juliettejns/baseJocondeMashup/blob/documentation_nettoye/dataset/README.md)
 
 ## Visualisation
+Nous avons réalisé trois tableaux de bord : voir [ici]().
 
 ## Conclusion
-
+- Ce que ça nous apprend sur les datas en prenant des pincettes
+- Ce que ça nous a appris sur comment faire une visualisation et un mashup de données.
 
 </div>
 
