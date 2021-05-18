@@ -16,6 +16,7 @@ Nous avons réalisé trois tableaux de bord sur Tableau Public (pour plus d'info
 
 ## Conclusion
 - Ce que ça nous apprend sur les datas en prenant des pincettes
+
 Outre toutes les informations que cela peut nous apprendre sur les données récoltées, nous avons également beaucoup appris sur la création d'un mashup de données et sa transformation en datavisualisation. En effet, les données peuvent être très longues à nettoyer afin de s'assurer un rendu et une étude intéressante. De plus, l'ajout de données en provenance d'autres bases n'est pas toujours le plus aisé et peut parfois réduire drastiquement la quantité de celles-ci. A l'inverse, si cette réduction de données peut surprendre, l'amélioration de la qualité des données a été largement appréciable. Concernant la datavisualisation, même si tout n'a pas pu être fait dans le même cadre, nous avons pu voir voir avec intérêt toutes les possibilités que nous donnaient des données propres.
 
 </div>
