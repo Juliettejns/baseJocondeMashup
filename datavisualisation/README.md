@@ -10,6 +10,7 @@ Nous savions ce que nous avions envie de montrer, mais lorsqu'il a fallu réalis
 
 ## Tableau Public
 [Tableau Public](https://public.tableau.com/s/)
+-> liens vers les visualisations
 
 
 ## Palladio
