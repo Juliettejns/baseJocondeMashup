@@ -2,7 +2,7 @@
 
 <div align="justify">
 
-Ce premier tableau de bord ([lien vers l'exemplaire sur Tableau Public]) (https://public.tableau.com/profile/jahan3241#!/vizhome/EtudesurdesdonnesrcupresdelaBaseJoconde/PrsentationgnraledesdonnesrcupressurlaBaseJoconde) permet de donner un aperçu rapide des données de ce dataset, en mettant l'emphase sur les musées, auteurs et périodes présents.
+Ce premier tableau de bord ([lien vers l'exemplaire sur Tableau Public](https://public.tableau.com/profile/jahan3241#!/vizhome/EtudesurdesdonnesrcupresdelaBaseJoconde/PrsentationgnraledesdonnesrcupressurlaBaseJoconde)) permet de donner un aperçu rapide des données de ce dataset, en mettant l'emphase sur les musées, auteurs et périodes présents.
 
 Le présent dépôt contient les visualisations réalisées, en format image (png), ainsi que le détail de leur création.
 ## Carte des musées
