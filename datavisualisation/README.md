@@ -9,28 +9,11 @@ Pour les artistes, il nous paraissait important de les décrire. Nous avions id�
 Nous savions ce que nous avions envie de montrer, mais lorsqu'il a fallu réaliser la visualisation, les questions de forme, mais aussi de la donnée et ses posssibilités de rendu sont devenues prégnantes. Certaines des visualisations auxquelles nous avions pensé ne fonctionnaient pas faute de données suffisantes ou de visualisation assez claire. A l'inverse, le nettoyage nous a donné de nouvelles idées. Nous avons pu les mettre en oeuvre dans différents cadres : Tableau Public et Palladio.
 
 ## Tableau Public
-[Tableau Public](https://public.tableau.com/s/)
--> liens vers les visualisations
-
+[Tableau Public](https://public.tableau.com/s/) nous a permis de réaliser des trois tableaux de bord décrivant nos données :
+- Une [présentation générale](https://public.tableau.com/profile/jahan3241#!/vizhome/EtudesurdesdonnesrcupresdelaBaseJoconde/PrsentationgnraledesdonnesrcupressurlaBaseJoconde) des données récupérées, permettant d'avoir un premier aperçu assez global de nos données, notamment les musées, peintres et périodes représentés dans notre dataset. Un détail de nos choix est disponible [ici](https://github.com/Juliettejns/baseJocondeMashup/blob/documentation_nettoye/datavisualisation/1_Presentation_generale/README.md).
+- Un focus sur les [aspects juridiques](https://public.tableau.com/profile/jahan3241#!/vizhome/EtudesurdesdonnesrcupresdelaBaseJoconde/Aspectsjuridiques) de notre dataset, tels que les types et dates d'acquisition et les propriétaires des oeuvres. Un détail de nos choix est disponible [ici](https://github.com/Juliettejns/baseJocondeMashup/tree/documentation_nettoye/datavisualisation/2_Aspects_juridiques)
+- Un [étude des genres et matérialité](https://public.tableau.com/profile/jahan3241#!/vizhome/EtudesurdesdonnesrcupresdelaBaseJoconde/Etudesurlegenreetlamatrialit) de nos données, partant plus dans le détail et s'intéressant aux genres et dimensions des oeuvres, aux nationalités et écoles des peintres et aux supports et techniques utilisées. Un détail de ces choix est disponible [ici](https://github.com/Juliettejns/baseJocondeMashup/tree/documentation_nettoye/datavisualisation/3_Etude_genre).
 
 ## Palladio
-Ayant à traiter des oeuvres picturales, il était important de pouvoir rendre compte de celles-ci visuellement en passant par des représentations. Cela n'étant pas possible dans Tableau, il a fallu passer par [Palladio](http://hdlab.stanford.edu/palladio/) afin de réaliser une visualisation. Etant donné qu'il n'est pas possible de récupérer la visualisation créée, nous avons téléchargé le fichier json lorsque celle-ci a été terminée. Il se trouve également dans ce dossier. Nous voulions également pouvoir rendre compte de ce que nous avions effectivement fait dans Palladio. Ci-dessous se trouvent quelques images qui rendent compte de la visualisation.
-
-<p align="center">
-  <img src="../images/Palladio1" width="1000"/>
-</p>
-
-Comme on peut le voir sur cette première image, nous avons pu lier les images, ainsi que leur titre, leur sujet et leur artiste. Cela crée de cette manière des cartels assez intéressants et plutôt lisibles.
-
-<p align="center">
-  <img src="../images/Palladio2" width="1000"/>
-</p>
-
-Cela correspond à quatre colonnes dans la base de données. Ces données ont été choisies dans l'optique de rappeler ce que l'on trouve dans les musées, bien que l'on soit limité en quantité. Comme on peut le voir dans cet encart en haut à droite de cette image, il n'y a pas beaucoup de champs disponibles. Il n'en reste pas moins que s'il on avait eu la possibilité d'ajouter plus d'informations, cela aurait pu rendre une visualisation déjà lourde, encore plus conséquente et difficile à charger. La visualisation par année de création donne une vision de l'évolution de la peinture dans le temps, en ce qui concerne les sujets, les genres, les couleurs...
-
-<p align="center">
-  <img src="../images/Palladio3" width="1000"/>
-</p>
-
-En outre, n'ayant pas des images pour toutes les oeuvres, nous avons décidé de filtrer toute oeuvre qui n'aurait pas le lien vers une image. Cela a été possible grâce à la colonne de type boleen créée en amont selon ce critère. Ce filtre a pu être mis en place grâce à l'encart qui se trouve en bas de la page de visualisation de Palladio, comme montré sur cette image.
-</div>
+Grâce à [Palladio](https://hdlab.stanford.edu/palladio/), nous avons également présenter les images des oeuvres de notre dataset que nous avons récupéré sur Wikidata. Cette gallerie d'images est accessible en récupérant le [json](https://github.com/Juliettejns/baseJocondeMashup/blob/documentation_nettoye/datavisualisation/4_Gallerie_Paladio/Datavisualisation%20des%20peintures%20communes%20%C3%A0%20la%20Base%20Joconde%20et%20Wikidata.palladio.1.2.9.json) disponible dans notre dépôt et en le lançant dans Palladio. Pour plus d'informations: [ici](https://github.com/Juliettejns/baseJocondeMashup/blob/documentation_nettoye/datavisualisation/4_Gallerie_Paladio/README.md).
+<div>
