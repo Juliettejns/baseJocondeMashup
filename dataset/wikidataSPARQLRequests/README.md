@@ -79,6 +79,7 @@ Le fichier csv contenant les oeuvres de la base Joconde accessibles sur Wikidata
     </tbody>
 </table>
 Si ce résultat reste particulièrement propre, il a tout de même fallu le nettoyer un peu. Nous n'avons d'abord conservé que ce qui ressemble à des peintures, ce qui a été fait en filtrant avec la colonne `type` C'est notamment le cas des ``dates``, qu'il a fallu nettoyer pour ne garder que l'année, dans l'idée de réaliser une visualisation à partir de cela, ou encore, de la colonne `matériel`. Celle-ci a été un peu plus longue à restructurer, puisqu'il a fallu la diviser en deux colonnes, une première contenant les `techniques de peinture` et une seconde les `supports`. Les `genres` ont été nettoyés pour normaliser les différents termes et une colonne `genre simplifié` a été créée.
+
 ### Pour la requête concernant les auteurs
 Le fichier csv contenant les auteurs ayant réalisé des oeuvres de la base Joconde accessibles sur Wikidata est composé de 500 lignes et de 6 colonnes, présentées ci-dessus:</br>
 <table>
