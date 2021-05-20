@@ -28,9 +28,132 @@ Pour des raisons de visualisation finale, nous avons dédoublé sciemment certai
 ### Dernières étapes avant la jointure
 Ces dernières modifications du dataset ont eu lieu lorsque toutes les précédentes ont été réalisées et que les fichiers csv provenant des requêtes SPARQL avaient été également nettoyés. En effet, afin de faciliter la jointure avec les deux autres datasets, nous avons pris le parti de supprimer en amont toutes les lignes dont le domaine n'était pas la peinture, suite au constat de leur plus grande représentativité dans les images récupérées sur Wikidata. Dans la même lancée, nous avons également retiré en amont plusieurs colonnes dont nous savions que les données n'étaient pas aussi complètes et/ou propres que celles récupérées dans Wikidata, comme pour les matériaux et les techniques.
 
-
 ## Résultat
-
-IMAGE DES DIFFÉRENTES COLONNES RÉCUPEREES
+<table>
+    <thead>
+        <tr>
+            <th align="left">Élément supprimé</th>
+            <th align="left">Élément conservé</th>
+            <th align="left">Élément ajouté</th>
+            <th align="left">Liste finale</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="left">Ancien dépôt</td>
+            <td align="left">Auteur</td>
+            <td align="left">Date_acquisition</td>
+            <td align="left">Référence</td>
+        </tr>
+        <tr>
+            <td align="left">Appellation</td>
+            <td align="left">Domaine</td>
+            <td align="left">Mode_acquisition_simplifié</td>
+            <td align="left">Auteurs</td>
+        </tr>
+        <tr>
+            <td align="left">Date d’acquisition</td>
+            <td align="left">Ecole</td>
+            <td align="left">Mode_acquisition</td>
+            <td align="left">Date_acquisition</td>
+        </tr>
+        <tr>
+            <td align="left">Date de dépôt</td>
+            <td align="left">Géographie historique</td>
+            <td align="left">Latitude</td>
+            <td align="left">Dénomination</td>
+        </tr
+        <tr>
+            <td align="left">Découverte / Collecte</td>
+            <td align="left">Numéro musée de France</td>
+            <td align="left">Longitude</td>
+            <td align="left">Entrée_base</td>
+        </tr
+        <tr>
+            <td align="left">Utilisation</td>
+            <td align="left">Lieu de création / utilisation</td>
+            <td align="left"></td>
+            <td align="left">Domaine</td>
+        </tr
+        <tr>
+            <td align="left">Dépôt</td>
+            <td align="left">Lieu de conservation</td>
+            <td align="left"></td>
+            <td align="left">Ecole_pays</td>
+        </tr
+        <tr>
+            <td align="left">Mesures</td>
+            <td align="left">Identiant base Museofile</td>
+            <td align="left"></td>
+            <td align="left">Date_création</td>
+        </tr
+        <tr>
+            <td align="left">Date de mise à jour</td>
+            <td align="left">Référence</td>
+            <td align="left"></td>
+            <td align="left">Identifiant_Museofile</td>
+        </tr
+        <tr>
+            <td align="left">Titre</td>
+            <td align="left">Sujet</td>
+            <td align="left"></td>
+            <td align="left">Nom_officiel_musée</td>
+        </tr
+        <tr>
+            <td align="left">Epoque / style / mouvement</td>
+            <td align="left">Source de la représentation</td>
+            <td align="left"></td>
+            <td align="left">Sujet_représenté</td>
+        </tr
+            <tr>
+            <td align="left">Millésime</td>
+            <td align="left">Statut juridique</td>
+            <td align="left"></td>
+            <td align="left">Statut_juridique</td>
+        </tr
+        <tr>
+            <td align="left">Millésime d’utilisation</td>
+            <td align="left">Dénomination</td>
+            <td align="left"></td>
+            <td align="left">Mode_acquisition_simplifié</td>
+        </tr
+        <tr>
+            <td align="left">Onomastique</td>
+            <td align="left">Date d'import</td>
+            <td align="left"></td>
+            <td align="left">Mode_acquisition</td>
+        </tr
+        <tr>
+            <td align="left">Précisions sur l'auteur</td>
+            <td align="left"></td>
+            <td align="left"></td>
+            <td align="left">Ville</td>
+        </tr
+        <tr>
+            <td align="left">Période de l’original copié</td>
+            <td align="left"></td>
+            <td align="left"></td>
+            <td align="left">Région</td>
+        </tr
+        <tr>
+            <td align="left">Période</td>
+            <td align="left"></td>
+            <td align="left"></td>
+            <td align="left">Latitude</td>
+        </tr
+        <tr>
+            <td align="left">Période d’utilisation</td>
+            <td align="left"></td>
+            <td align="left"></td>
+            <td align="left">Longitude</td>
+        </tr
+        <tr>
+            <td align="left">Matériaux et techniques</td>
+            <td align="left"></td>
+            <td align="left"></td>
+            <td align="left"></td>
+        </tr>
+    </tbody>
+</table>
 
 </div>
