@@ -12,7 +12,7 @@ Ce dépôt contient un projet de mashup de données autour d'un extrait de la Ba
 Pour une description détaillée du travail réalisé : [ici](https://github.com/Juliettejns/baseJocondeMashup/blob/documentation_nettoye/dataset/README.md)
 
 ## Visualisation
-Nous avons réalisé trois tableaux de bord sur Tableau Public (pour plus d'informations, cliquer [ici]()) ainsi qu'une visualisation sur Palladio (pour plus d'informations, cliquer [ici]()).
+Nous avons réalisé trois tableaux de bord sur Tableau Public, ainsi qu'une visualisation sur Palladio (pour plus d'informations sur ces visualisation, cliquer [ici](https://github.com/Juliettejns/baseJocondeMashup/tree/main/datavisualisation)).
 
 ## Conclusion
 - Ce que ça nous apprend sur les datas en prenant des pincettes
