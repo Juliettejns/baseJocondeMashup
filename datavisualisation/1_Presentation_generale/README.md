@@ -13,7 +13,7 @@ La carte des musées était un incontournable. Il était nécessaire de représe
 </p>
 
 ## Nombres d'oeuvres par artiste
-Ce graphique donne à voir de la même manière que le précédent l'importance de chaque artiste dans notre dataset par rapport au nombre d'oeuvres lui correspondant.
+Ce graphique donne à voir de la même manière que le précédent l'importance de chaque artiste dans notre dataset par rapport au nombre d'oeuvres qui lui correspondent.
 
 <p align="center">
 <img src="Oeuvres_Artistes.png" width="500"/>
@@ -21,7 +21,7 @@ Ce graphique donne à voir de la même manière que le précédent l'importance 
 
 ## Date de création des oeuvres et de leur insertion dans la Base Joconde
 
-Ces deux graphiques ont été ajoutés côte à côte dans le tableau de bord. L'idée est de montrer cette double temporalité qui a son importance, tant pour savoir sur quel type d'oeuvres on peut avoir affaire, tant pour rendre compte de la temporalité de la constitution de la Base Joconde, ou du moins de ce que nous en avons extrait.
+Ces deux graphiques ont été ajoutés côte à côte dans le tableau de bord. L'idée est de montrer cette double temporalité qui a son importance, que pour savoir sur quel type d'oeuvres on peut avoir affaire, tant pour rendre compte de la temporalité de la constitution de la Base Joconde, ou du moins de ce que nous en avons extrait.
 .
 <p align="center">
 <img src="Année_creation_temps.png" width="400"/>
