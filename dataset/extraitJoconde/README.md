@@ -13,7 +13,7 @@ Sur les 34 colonnes de base, nous avons choisi de supprimer toutes celles ayant 
 
 ### Normalisation des valeurs  
 Sur les colonnes restantes, nous les avons avant tout renommées afin de les rendre toutes compréhensibles. Puis il a fallu nettoyer les données plus directement.
-#### Normalisation des _Interger_
+#### Normalisation des _Integer_
 Afin de faciliter toute visualisation par la suite et étant donné que ces dates sont très disparates, nous avons retiré toute mention de mois ou de jour. Cela a été le cas par exemple sur ``Date d'acquisition``. En ce qui concerne les mesures des oeuvres de la base, hauteurs et longueurs se trouvaient dans la même colonne : nous les avons donc séparées dans deux différentes. 
 #### Normalisation des termes
 Nous avons également dû travailler sur la normalisation des terminologies, notamment en ce qui concerne les colonnes ``Ville`` et ``Région``. Cela est passé par une mise en majuscule de toutes les premières lettres de tous les termes, ainsi que leur uniformisation.
