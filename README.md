@@ -1,30 +1,25 @@
 # Base Joconde Mashup
-
+<div align="justify">
+  
 Ce dépôt contient un projet de mashup de données autour d'un extrait de la Base Joconde, répertoriant les oeuvres d'art des musées français et accessible sur
 [data.culture.gouv.fr](https://data.culture.gouv.fr/explore/dataset/base-joconde-extrait/information/). Ce travail est réalisé dans le cadre du cours de Science de la donnée du [Master 2](http://www.chartes.psl.eu/fr/cursus/master-technologies-numeriques-appliquees-histoire) Technologies numériques appliquées à l'Histoire de l'École nationale des Chartes.
 
-## Justification du dataset 
-### 1 Constat
-- comment est notre dataset Joconde (gros, difficile à traiter sur les ordi et très mal organisé car rempli à la main) => on a voulu récupérer des infos plus propres venant de WD
-- sur WD on a trouvé des infos plus propres sur les auteurs/oeuvres dont les images => comme la plupart des images sont des images de peinture, on a décidé de partir sur une focalisation sur la peinture
-### 2. Nettoyage
-#### a Nettoyage Joconde 
--> voir le README correspondant
-#### b Nettoyage WD
--> voir le README correspondant
-### 3. Résultat du join
-Test avec un left-join : très peu d'infos correspondant à notre DS dans WD (à peine une 100aine)
-Finalement avec un inner-join on passe de 17000 à 700 dans le DS final.
+## Réalisation du Mashup
+<p align="center">
+  <img src="images/pipeline_mashup.png" width="400"/>
+</p>
 
-### Conclusion
-les 3 DS ne coincidaient pas du tout, mais on a continué car c'était intéressat de voir ce que pouvaient donner ce genre de jointures en visualisation
+Pour une description détaillée du travail réalisé : [ici](https://github.com/Juliettejns/baseJocondeMashup/blob/documentation_nettoye/dataset/README.md)
 
 ## Visualisation
-### Visualisation 1
-balbal
-### Visualisation 2
-balbal
-...
+Nous avons réalisé trois tableaux de bord sur Tableau Public, ainsi qu'une visualisation sur Palladio (pour plus d'informations sur ces visualisation, cliquer [ici](https://github.com/Juliettejns/baseJocondeMashup/tree/main/datavisualisation)).
+
+## Conclusion
+- Ce que ça nous apprend sur les datas en prenant des pincettes
+
+Outre toutes les informations que cela peut nous apprendre sur les données récoltées, nous avons également beaucoup appris sur la création d'un mashup de données et sa transformation en datavisualisation. En effet, les données peuvent être très longues à nettoyer afin de s'assurer un rendu et une étude intéressante. De plus, l'ajout de données en provenance d'autres bases n'est pas toujours le plus aisé et peut parfois réduire drastiquement la quantité de celles-ci. A l'inverse, si cette réduction de données peut surprendre, l'amélioration de la qualité des données a été largement appréciable. Concernant la datavisualisation, même si tout n'a pas pu être fait dans le même cadre, nous avons pu voir voir avec intérêt toutes les possibilités que nous donnaient des données propres.
+
+</div>
 
 ## Repository
 ```
@@ -45,7 +40,12 @@ balbal
 |     ├── base_joconde_oeuvres_auteurs.csv
 |     └── README.md
 |
+├── extraitJoconde
+|    ├── ...
+|    └── README.md
+|
 ├── imgs
+|
 └── README.md
 ```
 ## Crédits
