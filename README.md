@@ -40,7 +40,7 @@ Outre toutes les informations que cela peut nous apprendre sur les données réc
 |     ├── base_joconde_oeuvres_auteurs.csv
 |     └── README.md
 |
-├── Datavisualisation
+├── datavisualisation
 │     ├── 1_Présentation_générale
 |     |    ├── Annee_creation_temps.png
 |     |    ├── Carte_Musee.png
