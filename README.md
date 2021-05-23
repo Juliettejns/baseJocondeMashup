@@ -40,11 +40,33 @@ Outre toutes les informations que cela peut nous apprendre sur les données réc
 |     ├── base_joconde_oeuvres_auteurs.csv
 |     └── README.md
 |
-├── extraitJoconde
-|    ├── ...
-|    └── README.md
+├── datavisualisation
+│     ├── 1_Présentation_générale
+|     |    ├── Annee_creation_temps.png
+|     |    ├── Carte_Musee.png
+|     |    ├── Entree_base_temps.png
+│     │    ├── Oeuvre_Artistes.png
+|     |    └── README.md
+|     |
+│     ├── 2_Aspects_juridiques
+|     |    ├── Annee_acquisition_temps.png
+|     |    ├── Mode_acquisition.png
+|     |    ├── Statut_juridique.png
+|     |    └── README.md
+|     |
+│     ├── 3_Etude_genre
+|     |    ├── Artistes_ecole.png
+|     |    ├── Dimensions_genre.png
+|     |    ├── Support_technique.png
+|     |    └── README.md
+|     |
+│     ├── 4_Palladio
+|     |    ├── Gallerie.json
+|     |    └── README.md
+|     └── README.md
 |
-├── imgs
+├── images
+|     └── ...
 |
 └── README.md
 ```

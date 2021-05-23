@@ -6,7 +6,7 @@ Ce premier tableau de bord ([lien vers l'exemplaire sur Tableau Public](https://
 
 Le présent dépôt contient les visualisations réalisées, en format image (png), ainsi que le détail de leur création.
 ## Carte des musées
-La carte des musées était un incontournable. Il était nécessaire de représenter la géographie de ces oeuvres par le biais de leur institution de conservation. Nous pouvons donc voir les différents clusters, les différents lieux "vides". Il nous est apparu important également de visualiser la quantité de ces oeuvres au sein de chaque endroit. Cela donne à voir l'importance de la représentativité des musées au sein de notre dataset.
+La carte des musées était un incontournable. Il était nécessaire de représenter la géographie de ces oeuvres par le biais de leur institution de conservation. Nous pouvons donc voir les différents clusters, les différents lieux "vides". Il nous est apparu important également de visualiser la quantité de ces oeuvres au sein de chaque endroit. Cela donne à voir l'importance de la représentativité des musées au sein de notre dataset. Pour ce faire, nous avons utiiisé les colonnes `latitude` et `longitude`, afin de localiser les musées sur une carte.
 
 <p align="center">
 <img src="Carte_Musées.png" width="500"/>
@@ -14,7 +14,7 @@ La carte des musées était un incontournable. Il était nécessaire de représe
 
 ## Nombres d'oeuvres par artiste
 Ce graphique donne à voir de la même manière que le précédent l'importance de chaque artiste dans notre dataset par rapport au nombre d'oeuvres qui lui correspondent.
-
+Pour cette visualisation, nous avons mobilisé la colonne `nom des auteurs`.
 <p align="center">
 <img src="Oeuvres_Artistes.png" width="500"/>
 </p>
@@ -22,7 +22,8 @@ Ce graphique donne à voir de la même manière que le précédent l'importance 
 ## Date de création des oeuvres et de leur insertion dans la Base Joconde
 
 Ces deux graphiques ont été ajoutés côte à côte dans le tableau de bord. L'idée est de montrer cette double temporalité qui a son importance, que pour savoir sur quel type d'oeuvres on peut avoir affaire, tant pour rendre compte de la temporalité de la constitution de la Base Joconde, ou du moins de ce que nous en avons extrait.
-.
+
+Nous avons utilisé, respectivement pour chacun des graphiques, les colonnes ``date de création`` et ``date d'entrée`` dans la base auquel nous avons associé le nombre total d'oeuvres de notre dataset.
 <p align="center">
 <img src="Année_creation_temps.png" width="400"/>
 <img src="Entrée_base_temps.png" width="400"/>
